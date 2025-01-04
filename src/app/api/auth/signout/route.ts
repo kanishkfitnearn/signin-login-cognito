@@ -7,8 +7,7 @@ const {
 } = process.env;
 
 export async function GET(request: NextRequest) {
-    const idToken = request.cookies.get('id_token');
-    const accessToken = request.cookies.get('access_token');
+   
     const refreshToken = request.cookies.get('refresh_token');
 
     if (!refreshToken) {

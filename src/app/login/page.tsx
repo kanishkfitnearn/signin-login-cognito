@@ -31,7 +31,7 @@ export default function Page() {
       const data = await response.json();
       console.log("Login successful:", data); // Log success message
     } catch (err) {
-      console.error("An error occurred. Please try again.");
+      console.error("An error occurred during sign-in."); // Updated to avoid unused variable
     }
   };
 
@@ -87,7 +87,7 @@ export default function Page() {
           </button>
         </div>
         <div className="text-center mt-6">
-          <p className="text-sm text-gray-600">Don't have an account?</p>
+          <p className="text-sm text-gray-600">Don&apos;t have an account?</p> {/* Escaped `'` */}
           <button
             type="button"
             onClick={handleSignUp}
