@@ -31,7 +31,7 @@ export default function Page() {
       const data = await response.json();
       console.log("Login successful:", data); // Log success message
     } catch (err) {
-      console.error("An error occurred during sign-in."); // Updated to avoid unused variable
+      console.error("An error occurred during sign-in:", err); // Use 'err' here
     }
   };
 
